@@ -1,7 +1,8 @@
 // var React=require("react");
 import React from 'react';
 import ReactDOM from 'react-dom';
-import "./index.css";
+import './index.css';
+import App  from './App';
 // var ReactDOM=require("react-dom");
 const fname="Tanvi Saxena"
 // console.log(`my name is ${fname}`);
@@ -30,26 +31,11 @@ const fname="Tanvi Saxena"
 // </>,
 // document.getElementById("root"));
 //new Date(year,month,day,hrs,mins,secs)
-let curDate=new Date(2020,5,5,12);
-curDate=curDate.getHours();
-let greeting="";
-const cssStyle={};
-if(curDate>=1 && curDate<12)
-{
-   greeting="Good Morning";
-   cssStyle.color='green';
-}
-else if(curDate>=12 && curDate<19)
-{
-   greeting="Good AfterNoon";
-   cssStyle.color='pink';
-}
-else
-{
-   greeting="Good Night";
-   cssStyle.color='red';
-}
+
 ReactDOM.render(
-   <h1>Hello Sir,<span style={cssStyle}> {greeting}</span></h1>,
+   
+   <React.StrictMode>
+      <App/>
+   </React.StrictMode>,
    document.getElementById("root")
 );
